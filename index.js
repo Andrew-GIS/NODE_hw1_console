@@ -1,12 +1,6 @@
-// import { program } from 'commander';
-//const { program } = require("commander");
-// import contacts from '../hw1_console/contacts.js';
-
 const argv  = require("yargs").argv;
-// const { hideBin } = require("yargs/helpers");
 const contacts = require('./contacts');
 
-// TODO: рефакторить
 const invokeAction = async({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
@@ -34,6 +28,4 @@ const invokeAction = async({ action, id, name, email, phone }) => {
   }
 }
 
-// const arr = hideBin(process.argv);
-// const {argv} = yargs(arr);
 invokeAction(argv);
